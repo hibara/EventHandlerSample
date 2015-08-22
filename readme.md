@@ -1,7 +1,9 @@
-EventHandlerSample
+﻿EventHandlerSample
 ===========
 
-[Qiita][http://qiita.com/]にて、「Visual Studio C#でデリゲートを使い超シンプルなコールバックイベントを実装する」という記事を書いたものの、サンプルプログラムです。
+Qiita ( http://qiita.com/ ) にて、    
+「Visual Studio C#でデリゲートを使い超シンプルなコールバックイベントを実装する」
+という記事を書いたものの、サンプルプログラムです。
 
 詳しくは以下の記事URLを参考にしてください。
 
