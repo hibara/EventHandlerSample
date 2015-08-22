@@ -1,13 +1,13 @@
 EventHandlerSample
 ===========
 
-Qiita(http://qiita.com/)‚É‚ÄAuVisual Studio C#‚ÅƒfƒŠƒQ[ƒg‚ðŽg‚¢’´ƒVƒ“ƒvƒ‹‚ÈƒR[ƒ‹ƒoƒbƒNƒCƒxƒ“ƒg‚ðŽÀ‘•‚·‚év‚Æ‚¢‚¤‹LŽ–‚ð‘‚¢‚½‚à‚Ì‚ÌAƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Å‚·B
+Qiitaï¼ˆhttp://qiita.com/ï¼‰ã«ã¦ã€ã€ŒVisual Studio C#ã§ãƒ‡ãƒªã‚²ãƒ¼ãƒˆã‚’ä½¿ã„è¶…ã‚·ãƒ³ãƒ—ãƒ«ãªã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚¤ãƒ™ãƒ³ãƒˆã‚’å®Ÿè£…ã™ã‚‹ã€ã¨ã„ã†è¨˜äº‹ã‚’æ›¸ã„ãŸã‚‚ã®ã®ã€ã‚µãƒ³ãƒ—ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã™ã€‚
 
-Ú‚µ‚­‚ÍˆÈ‰º‚Ì‹LŽ–URL‚ðŽQl‚É‚µ‚Ä‚­‚¾‚³‚¢B
+è©³ã—ãã¯ä»¥ä¸‹ã®è¨˜äº‹URLã‚’å‚è€ƒã«ã—ã¦ãã ã•ã„ã€‚
 
 http://qiita.com/hibara/items/9fd56a5d594c000a5df0
 
-‚±‚±‚É’u‚©‚ê‚Ä‚¢‚éƒTƒ“ƒvƒ‹ƒ\[ƒX‚ÍAuMicrosoft Visual Studio Express 2013 for Windows Desktopv‚Å“®ìŠm”FÏ‚Ý‚Å‚·B
+ã“ã“ã«ç½®ã‹ã‚Œã¦ã„ã‚‹ã‚µãƒ³ãƒ—ãƒ«ã‚½ãƒ¼ã‚¹ã¯ã€ã€ŒMicrosoft Visual Studio Express 2013 for Windows Desktopã€ã§å‹•ä½œç¢ºèªæ¸ˆã¿ã§ã™ã€‚
 
 
 
