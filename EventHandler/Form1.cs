@@ -6,7 +6,7 @@ namespace EventHandler
 {
 	public partial class Form1 : Form
 	{
-		public static TextBox textBox = new TextBox();
+		public TextBox textBox = new TextBox();
 
 		public Form1()
 		{
@@ -37,14 +37,17 @@ namespace EventHandler
 			// メインウィンドウ（Form1）の横に表示
 			frm2.Left = this.Left + this.Width;
 			frm2.Top = this.Top;
+			//イベントのチェーンにハンドラを追加
+			frm2.MyEvent += this.CallBackEvent;
+
 			frm2.ShowDialog();
 			frm2.Dispose();
 		}
 
-		// Staticなコールバックイベント（Form2で発生したイベントからコールバックされる）
-		public static void CallBackEvent(int TestNumValue, string TestStringValue)
+		// コールバックイベント（Form2で発生したイベントからコールバックされる）
+		public void CallBackEvent(int TestNumValue, string TestStringValue)
 		{
-			Form1.textBox.AppendText(TestNumValue.ToString() + ": " + TestStringValue);
+			this.textBox.AppendText(TestNumValue.ToString() + ": " + TestStringValue);
 		}
 		
 
