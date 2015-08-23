@@ -23,9 +23,6 @@ namespace EventHandler
 		// フォームをロード
 		private void Form2_Load(object sender, EventArgs e)
 		{
-			//イベントのチェーンにハンドラを追加
-			this.MyEvent += Form1.CallBackEvent;
-			
 			//タイマーイベント・スタート
 			timer1.Enabled = true;
 		}
