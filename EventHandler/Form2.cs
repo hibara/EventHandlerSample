@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
 namespace EventHandler
 {
 
@@ -22,10 +23,7 @@ namespace EventHandler
 		//-----------------------------------
 		// フォームをロード
 		private void Form2_Load(object sender, EventArgs e)
-		{
-			//イベントのチェーンにハンドラを追加
-			this.MyEvent += Form1.CallBackEvent;
-			
+		{			
 			//タイマーイベント・スタート
 			timer1.Enabled = true;
 		}
@@ -40,9 +38,12 @@ namespace EventHandler
 			// Form2側にも表示
 			labelNumber.Text = i.ToString();
 			labelDateTime.Text = dt.ToString("yyyy/MM/dd (ddd) HH:mm:ss" + "\n");
-
-			// イベント発生（→ Form1）
-			this.FireEvent(i, dt);
+			
+			//-----------------------------------
+			// Form1側のアップデート（コールバック）
+			//-----------------------------------
+			UpdateProgress(i, labelDateTime.Text);
+			
 		}
 
 		//-----------------------------------
@@ -51,25 +52,37 @@ namespace EventHandler
 		{
 			this.Close();
 		}
-
+		
+		//-----------------------------------
+		// Form1へ伝えるイベントハンドラを定義
+		public event MyEventHandler MyProgressEvent;
+		// Form1へイベントを伝える関数を定義
+		private void UpdateProgress(int TestNumValue, string TestStringValue)
+		{
+			MyProgressEvent(new MyEventArgs(TestNumValue, TestStringValue));
+		}
+		
+		//-----------------------------------
+		//イベントハンドラのデリゲートを定義
+		public delegate void MyEventHandler(MyEventArgs e);
 
 		//-----------------------------------
-
-		// イベントで使うデリゲートを宣言する
-		public delegate void MyEventHandler(int TestNumValue, string TestStringValue);
-		// イベントを宣言する
-		public event MyEventHandler MyEvent;
-
-		// イベントを送信する、Form2上のメソッド
-		public void FireEvent(int Num, DateTime dt)
+		// 渡せるイベントデータ引数、EventArgsを継承したクラスを拡張
+		public class MyEventArgs : EventArgs
 		{
-			if (MyEvent != null)
+			private readonly int _TestNumValue;
+			private readonly string _TestStringValue;
+
+			public MyEventArgs(int TestNumValue, string TestStringValue)
 			{
-				MyEvent(Num, dt.ToString("yyyy/MM/dd (ddd) HH:mm:ss" + "\n"));
+				_TestNumValue = TestNumValue;
+				_TestStringValue = TestStringValue;
 			}
+			public int TestNumValue { get { return _TestNumValue; } }
+			public string TestStringValue { get { return _TestStringValue; } }
+
 		}
 
 	}
-
 
 }

@@ -30,7 +30,7 @@
 		{
 			this.buttonExit = new System.Windows.Forms.Button();
 			this.buttonExe = new System.Windows.Forms.Button();
-			this.panel1 = new System.Windows.Forms.Panel();
+			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// buttonExit
@@ -56,15 +56,14 @@
 			this.buttonExe.UseVisualStyleBackColor = true;
 			this.buttonExe.Click += new System.EventHandler(this.buttonExe_Click);
 			// 
-			// panel1
+			// textBox1
 			// 
-			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.panel1.Location = new System.Drawing.Point(13, 13);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(314, 208);
-			this.panel1.TabIndex = 3;
+			this.textBox1.Location = new System.Drawing.Point(13, 13);
+			this.textBox1.Multiline = true;
+			this.textBox1.Name = "textBox1";
+			this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBox1.Size = new System.Drawing.Size(314, 206);
+			this.textBox1.TabIndex = 3;
 			// 
 			// Form1
 			// 
@@ -72,13 +71,14 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.buttonExit;
 			this.ClientSize = new System.Drawing.Size(339, 273);
-			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.buttonExe);
 			this.Controls.Add(this.buttonExit);
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -86,7 +86,7 @@
 
 		private System.Windows.Forms.Button buttonExit;
 		private System.Windows.Forms.Button buttonExe;
-		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.TextBox textBox1;
 	}
 }
 
